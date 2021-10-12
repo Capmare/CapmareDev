@@ -180,9 +180,12 @@ if (window.console==null) { window["console"] = { log : function() {} } }; // so
 
 var Application = function() {
 
-	if	(typeof screen.orientation == 'undefined'){
-		alert("This website is not set up yet for mobile devices");
-	}
+	var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+    if (mobile) {
+        alert("Visit this on a Computer for Better View");              
+    } else {
+
+    }
 
 	// event constants
 	this.prefix = "--web-";
